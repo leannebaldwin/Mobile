@@ -34,7 +34,7 @@ TMobile.prototype.eventHandlers.onSessionEnded = function (sessionEndedRequest, 
 
 TMobile.prototype.intentHandlers = {
     // register custom intent handlers
-    "TMobile": function (intent, session, response) {
+    "TMobileIntent": function (intent, session, response) {
         response.tellWithCard("Your current balance is $69", "Your current balance is $69", "Your current balance is $69!");
     },
     "AMAZON.HelpIntent": function (intent, session, response) {
@@ -45,7 +45,7 @@ TMobile.prototype.intentHandlers = {
 // Create the handler that responds to the Alexa Request.
 exports.handler = function (event, context) {
     // Create an instance of the HelloWorld skill.
-    var TMobile = new TMobile();
-    TMobile.execute(event, context);
+    var TMobile = new tMobile();
+    tMobile.execute(event, context);
 };
 
